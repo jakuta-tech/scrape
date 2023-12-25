@@ -8,7 +8,6 @@ builds:
  -
   env:
     - CGO_ENABLED=0
-  main: ./main.go
   goos:
     - linux
     - darwin
@@ -31,16 +30,13 @@ changelog:
       - Merge branch
 archives:
   - name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
-    replacements:
-      386: i386
-      amd64: x86_64
 brews:
   - homepage: 'https://github.com/lawzava/scrape'
     description: 'CLI utility to scrape emails from websites'
     folder: Formula
     commit_author:
       name: Law Zava
-      email: law@zava.dev
+      email: git@lawzava.com 
     tap:
       owner: lawzava
       name: scrape
